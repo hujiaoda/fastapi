@@ -1,0 +1,17 @@
+### 运行前先启动：python -m uvicorn body_demo:app --reload
+### （先停掉 Fastapi_path 那个，两个 app 不能同时占 8000 端口）
+
+### POST 创建商品：body 是 JSON
+POST http://127.0.0.1:8000/items/123
+Content-Type: application/json
+
+{
+  "name": "鼠标",
+  "price": 99
+}
+
+### GET 读刚创建的商品
+GET http://127.0.0.1:8000/items/124
+
+### GET 读不存在的商品 -> 404
+GET http://127.0.0.1:8000/items/999

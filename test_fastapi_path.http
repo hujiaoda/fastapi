@@ -1,0 +1,10 @@
+### 运行前先启动：python -m uvicorn Fastapi_path:app --reload
+
+### 路径参数：查 5 号商品
+GET http://127.0.0.1:8000/item/5
+
+### 查询参数：搜索 q=hi
+GET http://127.0.0.1:8000/items/?q=hi
+
+### AI 问答（会调一次 DeepSeek）
+GET http://127.0.0.1:8000/ask_me?question=你是谁

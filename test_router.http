@@ -1,0 +1,14 @@
+
+### 运行前先启动：python -m uvicorn main:app --reload
+
+### users 组（prefix=/users）
+GET http://127.0.0.1:8000/users/list
+###
+GET http://127.0.0.1:8000/users/info/1
+###
+GET http://127.0.0.1:8000/users/filter?age_max=29
+
+### art 组（prefix=/art）
+GET http://127.0.0.1:8000/art/art_list
+###
+GET http://127.0.0.1:8000/art/art_buy/1
