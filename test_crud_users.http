@@ -1,0 +1,23 @@
+### 1. 创建用户（重复跑会撞 unique，换掉 username/email 即可）
+POST http://127.0.0.1:8000/users/
+Content-Type: application/json
+
+{
+    "username": "fastapi_demo",
+    "email": "fastapi_demo@aa.com",
+    "password": "123456"
+}
+
+### 2. 查询用户（id 填上面返回的）
+GET http://127.0.0.1:8000/users/1
+
+### 3. 只改邮箱，username 不传
+PUT http://127.0.0.1:8000/users/1
+Content-Type: application/json
+
+{
+    "email": "new_email@aa.com"
+}
+
+### 4. 删除用户
+DELETE http://127.0.0.1:8000/users/1
